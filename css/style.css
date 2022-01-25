@@ -1,0 +1,243 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after, q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+header {
+  position: relative;
+}
+
+header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header nav #nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+header nav #nav-container i {
+  cursor: pointer;
+  padding: 16px;
+}
+
+header nav #nav-container i.fa-bars {
+  display: block;
+}
+
+header nav #nav-container i.fa-times {
+  display: none;
+}
+
+header nav #nav-container #top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s all ease-in;
+  transition: 0.3s all ease-in;
+  background-color: #d5f0d2;
+  -webkit-box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.5);
+          box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.5);
+}
+
+header nav #nav-container #top-nav li {
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease-in;
+  transition: 0.3s all ease-in;
+}
+
+header nav #nav-container #top-nav li:last-child {
+  border-bottom: none;
+}
+
+header nav #nav-container #top-nav li:hover {
+  background-color: #2398e6;
+}
+
+header nav #nav-container #top-nav li:hover a {
+  color: white;
+}
+
+header nav #nav-container.active i.fa-bars {
+  display: none;
+}
+
+header nav #nav-container.active i.fa-times {
+  display: block;
+}
+
+header nav #nav-container.active #top-nav {
+  visibility: visible;
+  opacity: 1;
+}
+
+header #hero {
+  width: 100%;
+  height: 80vh;
+  background-color: #8dd686;
+}
+/*# sourceMappingURL=style.css.map */
