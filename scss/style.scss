@@ -2,14 +2,21 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
 //Variables
-$primary-color: rgb(35, 152, 230);
-$secondary-color: rgb(141, 214, 134);
+$primary-color: rgb(141, 214, 134);
+$darker-primary-color: rgb(60, 80, 58);
+$secondary-color: rgb(35, 152, 230);
+$darker-secondary-color: rgb(26, 116, 177);
 $light-text-color: grey;
 $dark-text-color: rgb(95, 95, 95);
 
 $stroke-width: 4px;
 
 $breakpoint-mobile: 768px;
+$main-container-width: 1200px;
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "Poppins", sans-serif;
@@ -23,6 +30,7 @@ a {
 header {
     position: relative;
     height: 80vh;
+    width: 100%;
 
     nav {
         position: absolute;
@@ -51,7 +59,7 @@ header {
                 flex-direction: column;
                 transform: translateX(120px);
                 transition: 0.1s all ease-in;
-                background-color: lighten($secondary-color, 50%);
+                background-color: lighten($primary-color, 50%);
                 box-shadow: 0px 2px 4px rgba($light-text-color, 0.5);
 
                 .dots {
@@ -93,7 +101,7 @@ header {
 
                     &:first-of-type {
                         border-top: none;
-                        border-right: 16px $secondary-color solid;
+                        border-right: 16px $primary-color solid;
                         background: white;
                         cursor: default;
 
@@ -102,7 +110,7 @@ header {
                         }
 
                         a {
-                            color: $secondary-color;
+                            color: $primary-color;
                             font-weight: bold;
                             cursor: default;
 
@@ -115,7 +123,7 @@ header {
                             background-color: white;
 
                             a {
-                                color: $secondary-color;
+                                color: $primary-color;
 
                                 span {
                                     color: $dark-text-color;
@@ -167,26 +175,49 @@ header {
             h1 {
                 font-size: 2.5em;
                 font-weight: bold;
+                color: white;
 
                 span {
-                    color: $secondary-color;
-                    text-shadow: 0px 0px 4px black;
+                    color: $primary-color;
                 }
             }
 
             p {
                 font-size: 1.2em;
                 padding: 8px 0;
-                color: darken($dark-text-color, 10%);
+                color: lighten($light-text-color, 10%);
+            }
+
+            .btn {
+                padding: 8px 16px;
+                margin: 24px 0;
+                align-self: flex-start;
+                background-color: $secondary-color;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                font-weight: bold;
+                transition: 0.2s all ease-in;
+                font-size: 1em;
+                letter-spacing: 0.05em;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $darker-secondary-color;
+                }
             }
 
             @media screen and (min-width:$breakpoint-mobile) {
                 h1 {
-                    font-size: 4em;
+                    font-size: 5em;
                 }
 
                 p {
-                    font-size: 1.4em;
+                    font-size: 1.5em;
+                }
+
+                .btn {
+                    font-size: 1.1em;
                 }
             }
         }
@@ -196,11 +227,15 @@ header {
 
 #courses {
     padding: 64px 32px;
+    width: 100%;
+    max-width: $main-container-width;
+    margin: 0 auto;
+    box-sizing: border-box;
 
     h1 {
         font-size: 1.5em;
         font-weight: bold;
-        color: $primary-color;
+        color: $darker-primary-color;
         margin-bottom: 24px;
         line-height: 120%;
     }
@@ -216,6 +251,9 @@ header {
             box-shadow: 0px 0px 4px rgba($light-text-color, 0.5);
             border-radius: 4px;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
             img {
                 width: 100%;
@@ -254,7 +292,30 @@ header {
                 font-size: 1.2em;
                 padding: 4px 16px;
                 font-weight: bold;
-                color: $secondary-color;
+                color: $primary-color;
+            }
+
+            .line {
+                width: calc(100% - 32px);
+                align-self: center;
+                border-top: 1px solid rgba($light-text-color, 0.2);
+            }
+
+            .btn {
+                padding: 8px 16px;
+                margin: 24px 16px;
+                align-self: flex-end;
+                cursor: pointer;
+                background-color: $secondary-color;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                font-weight: bold;
+                transition: 0.2s all ease-in;
+
+                &:hover {
+                    background-color: $darker-secondary-color;
+                }
             }
         }
 
