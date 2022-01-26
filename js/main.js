@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    $("#bar-icon").click(function () {
+    $("#top-nav").mouseover(function () {
         if (!$("#nav-container").hasClass("active")) {
             $("#nav-container").addClass("active");
         }
     });
 
-    $("#cross-icon").click(function () {
+    $("#top-nav").mouseout(function () {
         if ($("#nav-container").hasClass("active")) {
             $("#nav-container").removeClass("active");
         }

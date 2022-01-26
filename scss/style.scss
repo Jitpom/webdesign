@@ -5,7 +5,7 @@
 $primary-color: rgb(35, 152, 230);
 $secondary-color: rgb(141, 214, 134);
 $light-text-color: grey;
-$dark-text-color: rgb(46, 46, 46);
+$dark-text-color: rgb(95, 95, 95);
 
 body {
     font-family: "Poppins", sans-serif;
@@ -24,8 +24,11 @@ header {
         top: 0;
         left: 0;
         width: 100%;
+        height: 80vh;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
+        overflow: hidden;
         // box-shadow: 0 2px 40px rgba($light-text-color, 0.5);
 
         #nav-container {
@@ -36,34 +39,21 @@ header {
             i {
                 cursor: pointer;
                 padding: 16px;
-
-                &.fa-bars {
-                    display: block;
-                }
-
-                &.fa-times {
-                    display: none;
-                }
             }
 
             #top-nav {
                 display: flex;
                 flex-direction: column;
-                visibility: hidden;
-                opacity: 0;
-                transition: 0.3s all ease-in;
+                transform: translateX(104px);
+                transition: 0.1s all ease-in;
                 background-color: lighten($secondary-color, 50%);
                 box-shadow: 0px 2px 4px rgba($light-text-color, 0.5);
 
                 li {
-                    padding: 8px 16px;
-                    border-bottom: 1px solid rgba($light-text-color, 0.5);
+                    padding: 8px 0px;
+                    border-top: 1px solid rgba($light-text-color, 0.5);
                     cursor: pointer;
                     transition: 0.3s all ease-in;
-
-                    &:last-child {
-                        border-bottom: none;
-                    }
 
                     &:hover {
                         background-color: $primary-color;
@@ -72,22 +62,22 @@ header {
                             color: white;
                         }
                     }
+
+                    &:first-of-type {
+                        &:hover {
+                            background-color: white;
+
+                            a {
+                                color: $light-text-color;
+                            }
+                        }
+                    }
                 }
             }
 
             &.active {
-                i {
-                    &.fa-bars {
-                        display: none;
-                    }
-
-                    &.fa-times {
-                        display: block;
-                    }
-                }
-
                 #top-nav {
-                    visibility: visible;
+                    transform: translateX(0px);
                     opacity: 1;
                 }
             }
@@ -111,11 +101,16 @@ header {
             h1 {
                 font-size: 2.5em;
                 font-weight: bold;
+
+                span {
+                    color: $secondary-color
+                }
             }
 
             p {
                 font-size: 1.3em;
                 padding: 8px 0;
+                color: $dark-text-color;
             }
         }
     }

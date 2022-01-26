@@ -139,7 +139,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #2e2e2e;
+  color: #5f5f5f;
 }
 
 header {
@@ -151,12 +151,17 @@ header nav {
   top: 0;
   left: 0;
   width: 100%;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
 }
 
 header nav #nav-container {
@@ -177,14 +182,6 @@ header nav #nav-container i {
   padding: 16px;
 }
 
-header nav #nav-container i.fa-bars {
-  display: block;
-}
-
-header nav #nav-container i.fa-times {
-  display: none;
-}
-
 header nav #nav-container #top-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,25 +190,21 @@ header nav #nav-container #top-nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: 0.3s all ease-in;
-  transition: 0.3s all ease-in;
+  -webkit-transform: translateX(104px);
+          transform: translateX(104px);
+  -webkit-transition: 0.1s all ease-in;
+  transition: 0.1s all ease-in;
   background-color: white;
   -webkit-box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.5);
           box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.5);
 }
 
 header nav #nav-container #top-nav li {
-  padding: 8px 16px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 8px 0px;
+  border-top: 1px solid rgba(128, 128, 128, 0.5);
   cursor: pointer;
   -webkit-transition: 0.3s all ease-in;
   transition: 0.3s all ease-in;
-}
-
-header nav #nav-container #top-nav li:last-child {
-  border-bottom: none;
 }
 
 header nav #nav-container #top-nav li:hover {
@@ -222,16 +215,17 @@ header nav #nav-container #top-nav li:hover a {
   color: white;
 }
 
-header nav #nav-container.active i.fa-bars {
-  display: none;
+header nav #nav-container #top-nav li:first-of-type:hover {
+  background-color: white;
 }
 
-header nav #nav-container.active i.fa-times {
-  display: block;
+header nav #nav-container #top-nav li:first-of-type:hover a {
+  color: grey;
 }
 
 header nav #nav-container.active #top-nav {
-  visibility: visible;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
   opacity: 1;
 }
 
@@ -263,8 +257,13 @@ header #hero .hero-heading h1 {
   font-weight: bold;
 }
 
+header #hero .hero-heading h1 span {
+  color: #8dd686;
+}
+
 header #hero .hero-heading p {
   font-size: 1.3em;
   padding: 8px 0;
+  color: #5f5f5f;
 }
 /*# sourceMappingURL=style.css.map */
