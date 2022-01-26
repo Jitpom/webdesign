@@ -28,8 +28,26 @@
             </section>
         </nav>
 
-        <section id="hero"></section>
+        <section id="hero">
+            <div class="hero-heading">
+                <h1>UX/UI Design Courses</h1>
+                <p>From prototyping to web coding</p>
+            </div>
+        </section>
     </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.clouds.min.js"></script>
+    <script>
+        VANTA.CLOUDS({
+            el: "#hero",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00
+        })
+    </script>
 </body>
 
 </html>
