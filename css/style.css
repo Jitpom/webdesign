@@ -144,6 +144,7 @@ a {
 
 header {
   position: relative;
+  height: 80vh;
 }
 
 header nav {
@@ -190,8 +191,8 @@ header nav #nav-container #top-nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transform: translateX(104px);
-          transform: translateX(104px);
+  -webkit-transform: translateX(120px);
+          transform: translateX(120px);
   -webkit-transition: 0.1s all ease-in;
   transition: 0.1s all ease-in;
   background-color: white;
@@ -242,8 +243,41 @@ header nav #nav-container #top-nav li {
   transition: 0.3s all ease-in;
 }
 
+header nav #nav-container #top-nav li a {
+  padding-right: 16px;
+}
+
 header nav #nav-container #top-nav li:first-of-type {
   border-top: none;
+  border-right: 16px #8dd686 solid;
+  background: white;
+  cursor: default;
+}
+
+header nav #nav-container #top-nav li:first-of-type i {
+  cursor: default;
+}
+
+header nav #nav-container #top-nav li:first-of-type a {
+  color: #8dd686;
+  font-weight: bold;
+  cursor: default;
+}
+
+header nav #nav-container #top-nav li:first-of-type a span {
+  color: #5f5f5f;
+}
+
+header nav #nav-container #top-nav li:first-of-type:hover {
+  background-color: white;
+}
+
+header nav #nav-container #top-nav li:first-of-type:hover a {
+  color: #8dd686;
+}
+
+header nav #nav-container #top-nav li:first-of-type:hover a span {
+  color: #5f5f5f;
 }
 
 header nav #nav-container #top-nav li:hover {
@@ -254,18 +288,16 @@ header nav #nav-container #top-nav li:hover a {
   color: white;
 }
 
-header nav #nav-container #top-nav li:first-of-type:hover {
-  background-color: white;
-}
-
-header nav #nav-container #top-nav li:first-of-type:hover a {
-  color: grey;
-}
-
 header nav #nav-container.active #top-nav {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
   opacity: 1;
+}
+
+header nav #nav-container.active #top-nav li:first-of-type {
+  background: rgba(128, 128, 128, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(50%, white), to(rgba(128, 128, 128, 0.2)));
+  background: linear-gradient(180deg, white 0%, white 50%, rgba(128, 128, 128, 0.2) 100%);
 }
 
 header #hero {
@@ -298,11 +330,108 @@ header #hero .hero-heading h1 {
 
 header #hero .hero-heading h1 span {
   color: #8dd686;
+  text-shadow: 0px 0px 4px black;
 }
 
 header #hero .hero-heading p {
-  font-size: 1.3em;
+  font-size: 1.2em;
   padding: 8px 0;
+  color: #464646;
+}
+
+@media screen and (min-width: 768px) {
+  header #hero .hero-heading h1 {
+    font-size: 4em;
+  }
+  header #hero .hero-heading p {
+    font-size: 1.4em;
+  }
+}
+
+#courses {
+  padding: 64px 32px;
+}
+
+#courses h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2398e6;
+  margin-bottom: 24px;
+  line-height: 120%;
+}
+
+#courses .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 32px;
+}
+
+#courses .card-container .card {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.5);
+          box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#courses .card-container .card img {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#courses .card-container .card h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 4px 16px;
+  padding-top: 16px;
+}
+
+#courses .card-container .card .sub-caption {
+  padding: 4px 16px;
   color: #5f5f5f;
+  line-height: 150%;
+}
+
+#courses .card-container .card .instructor,
+#courses .card-container .card .hours {
+  color: grey;
+  font-weight: 300;
+  font-size: 0.8em;
+  padding: 4px 16px;
+}
+
+#courses .card-container .card .hours {
+  padding-bottom: 16px;
+}
+
+#courses .card-container .card .price {
+  font-size: 1.2em;
+  padding: 4px 16px;
+  font-weight: bold;
+  color: #8dd686;
+}
+
+@media screen and (min-width: 768px) {
+  #courses .card-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    row-gap: 0;
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

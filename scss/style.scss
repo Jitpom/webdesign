@@ -7,6 +7,10 @@ $secondary-color: rgb(141, 214, 134);
 $light-text-color: grey;
 $dark-text-color: rgb(95, 95, 95);
 
+$stroke-width: 4px;
+
+$breakpoint-mobile: 768px;
+
 body {
     font-family: "Poppins", sans-serif;
 }
@@ -18,6 +22,7 @@ a {
 
 header {
     position: relative;
+    height: 80vh;
 
     nav {
         position: absolute;
@@ -44,7 +49,7 @@ header {
             #top-nav {
                 display: flex;
                 flex-direction: column;
-                transform: translateX(104px);
+                transform: translateX(120px);
                 transition: 0.1s all ease-in;
                 background-color: lighten($secondary-color, 50%);
                 box-shadow: 0px 2px 4px rgba($light-text-color, 0.5);
@@ -82,8 +87,41 @@ header {
                     cursor: pointer;
                     transition: 0.3s all ease-in;
 
+                    a {
+                        padding-right: 16px;
+                    }
+
                     &:first-of-type {
                         border-top: none;
+                        border-right: 16px $secondary-color solid;
+                        background: white;
+                        cursor: default;
+
+                        i {
+                            cursor: default;
+                        }
+
+                        a {
+                            color: $secondary-color;
+                            font-weight: bold;
+                            cursor: default;
+
+                            span {
+                                color: $dark-text-color;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: white;
+
+                            a {
+                                color: $secondary-color;
+
+                                span {
+                                    color: $dark-text-color;
+                                }
+                            }
+                        }
                     }
 
                     &:hover {
@@ -93,16 +131,6 @@ header {
                             color: white;
                         }
                     }
-
-                    &:first-of-type {
-                        &:hover {
-                            background-color: white;
-
-                            a {
-                                color: $light-text-color;
-                            }
-                        }
-                    }
                 }
             }
 
@@ -110,6 +138,13 @@ header {
                 #top-nav {
                     transform: translateX(0px);
                     opacity: 1;
+
+                    li {
+                        &:first-of-type {
+                            background: rgba($light-text-color, 0.2);
+                            background: linear-gradient(180deg, white 0%, white 50%, rgba($light-text-color, 0.2) 100%);
+                        }
+                    }
                 }
             }
         }
@@ -134,16 +169,99 @@ header {
                 font-weight: bold;
 
                 span {
-                    color: $secondary-color
+                    color: $secondary-color;
+                    text-shadow: 0px 0px 4px black;
                 }
             }
 
             p {
-                font-size: 1.3em;
+                font-size: 1.2em;
                 padding: 8px 0;
-                color: $dark-text-color;
+                color: darken($dark-text-color, 10%);
+            }
+
+            @media screen and (min-width:$breakpoint-mobile) {
+                h1 {
+                    font-size: 4em;
+                }
+
+                p {
+                    font-size: 1.4em;
+                }
             }
         }
     }
 
+}
+
+#courses {
+    padding: 64px 32px;
+
+    h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: $primary-color;
+        margin-bottom: 24px;
+        line-height: 120%;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+
+        .card {
+            width: 100%;
+            flex-grow: 1;
+            box-shadow: 0px 0px 4px rgba($light-text-color, 0.5);
+            border-radius: 4px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 240px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            h3 {
+                font-weight: bold;
+                font-size: 1.2em;
+                padding: 4px 16px;
+                padding-top: 16px;
+            }
+
+            .sub-caption {
+                padding: 4px 16px;
+                color: $dark-text-color;
+                line-height: 150%;
+            }
+
+            .instructor,
+            .hours {
+                color: $light-text-color;
+                font-weight: 300;
+                font-size: 0.8em;
+                padding: 4px 16px;
+
+            }
+
+            .hours {
+                padding-bottom: 16px;
+            }
+
+            .price {
+                font-size: 1.2em;
+                padding: 4px 16px;
+                font-weight: bold;
+                color: $secondary-color;
+            }
+        }
+
+        @media screen and (min-width: $breakpoint-mobile) {
+            flex-direction: row;
+            row-gap: 0;
+            column-gap: 32px;
+        }
+    }
 }
