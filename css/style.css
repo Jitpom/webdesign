@@ -199,12 +199,51 @@ header nav #nav-container #top-nav {
           box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.5);
 }
 
+header nav #nav-container #top-nav .dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+  padding: 16px 7px;
+  padding-bottom: 0;
+}
+
+header nav #nav-container #top-nav .dots div {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+header nav #nav-container #top-nav .dots div:nth-of-type(1) {
+  background-color: #e45c5c;
+}
+
+header nav #nav-container #top-nav .dots div:nth-of-type(2) {
+  background-color: #ebeb30;
+}
+
+header nav #nav-container #top-nav .dots div:nth-of-type(3) {
+  background-color: #40d140;
+}
+
 header nav #nav-container #top-nav li {
   padding: 8px 0px;
   border-top: 1px solid rgba(128, 128, 128, 0.5);
   cursor: pointer;
   -webkit-transition: 0.3s all ease-in;
   transition: 0.3s all ease-in;
+}
+
+header nav #nav-container #top-nav li:first-of-type {
+  border-top: none;
 }
 
 header nav #nav-container #top-nav li:hover {
