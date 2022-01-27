@@ -795,9 +795,81 @@ header #hero .hero-heading .btn:hover {
 footer {
   background-color: #141414;
   width: 100%;
-  padding: 64px 32px;
-  min-height: 300px;
+  padding: 48px 32px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-top: 16px solid black;
+}
+
+footer .first-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer .first-line .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .first-line .logo .dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  row-gap: 4px;
+  padding: 0 7px;
+  padding-bottom: 0;
+}
+
+footer .first-line .logo .dots div {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+footer .first-line .logo .dots div:nth-of-type(1) {
+  background-color: #e45c5c;
+}
+
+footer .first-line .logo .dots div:nth-of-type(2) {
+  background-color: #ebeb30;
+}
+
+footer .first-line .logo .dots div:nth-of-type(3) {
+  background-color: #40d140;
+}
+
+footer .first-line .logo h3 {
+  color: #8dd686;
+  font-weight: bold;
+}
+
+footer .first-line .logo h3 span {
+  color: white;
+}
+
+footer .first-line h1 {
+  color: grey;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 16px;
+  opacity: 0.4;
 }
 /*# sourceMappingURL=style.css.map */
