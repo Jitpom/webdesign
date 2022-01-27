@@ -206,6 +206,7 @@ header nav #nav-container #top-nav {
   background-color: white;
   -webkit-box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.5);
           box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.5);
+  border-radius: 16px 0 0px 16px;
 }
 
 header nav #nav-container #top-nav .dots {
@@ -596,6 +597,199 @@ header #hero .hero-heading .btn:hover {
 
 #courses .credits {
   visibility: hidden;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-1000px) rotate(720deg);
+            transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-1000px) rotate(720deg);
+            transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+#testimonials {
+  position: relative;
+  height: auto;
+}
+
+#testimonials .background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #8dd686;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#testimonials .background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-animation: animate 19s linear infinite;
+          animation: animate 19s linear infinite;
+}
+
+#testimonials .background li:nth-child(0) {
+  left: 31%;
+  width: 128px;
+  height: 128px;
+  bottom: -128px;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#testimonials .background li:nth-child(1) {
+  left: 7%;
+  width: 194px;
+  height: 194px;
+  bottom: -194px;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+#testimonials .background li:nth-child(2) {
+  left: 8%;
+  width: 169px;
+  height: 169px;
+  bottom: -169px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+#testimonials .background li:nth-child(3) {
+  left: 1%;
+  width: 161px;
+  height: 161px;
+  bottom: -161px;
+  -webkit-animation-delay: 13s;
+          animation-delay: 13s;
+}
+
+#testimonials .background li:nth-child(4) {
+  left: 53%;
+  width: 135px;
+  height: 135px;
+  bottom: -135px;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+
+#testimonials .background li:nth-child(5) {
+  left: 78%;
+  width: 187px;
+  height: 187px;
+  bottom: -187px;
+  -webkit-animation-delay: 19s;
+          animation-delay: 19s;
+}
+
+#testimonials .background li:nth-child(6) {
+  left: 35%;
+  width: 115px;
+  height: 115px;
+  bottom: -115px;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+#testimonials .background li:nth-child(7) {
+  left: 74%;
+  width: 107px;
+  height: 107px;
+  bottom: -107px;
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
+}
+
+#testimonials .background li:nth-child(8) {
+  left: 70%;
+  width: 193px;
+  height: 193px;
+  bottom: -193px;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+#testimonials .background li:nth-child(9) {
+  left: 9%;
+  width: 172px;
+  height: 172px;
+  bottom: -172px;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+#testimonials .quote {
+  padding: 64px;
+  padding-bottom: 0px;
+  line-height: 150%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+#testimonials .quote i {
+  -webkit-transform: translateY(-0.2em);
+          transform: translateY(-0.2em);
+}
+
+#testimonials .author {
+  color: #5f5f5f;
+  font-size: 0.8em;
+  text-align: right;
+  padding: 4px 64px;
+  padding-bottom: 64px;
+}
+
+#testimonials .author::before {
+  content: "-";
+}
+
+@media screen and (min-width: 768px) {
+  #testimonials .quote {
+    font-size: 1.8em;
+    max-width: 960px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
+  }
+  #testimonials .author {
+    max-width: 960px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
+    font-size: 1em;
+    padding-top: 12px;
+  }
 }
 
 footer {
